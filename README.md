@@ -1,5 +1,5 @@
 ## Number To Bangla Words
-This lightwieght library converts number to **bangla words**. 
+This lightweight library converts numbers to **Bangla Words**. 
 
 ### Credit
 Original credit goes to  [techjewel](https://gist.github.com/techjewel/6645397) & for bangla version [Kashohel](https://gist.github.com/kashohel/437aabd046e13a5c12d92aa370b8e61c).
