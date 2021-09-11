@@ -20,6 +20,9 @@ namespace NumberToBanglaWord
         {
             try
             {
+                if (!IsNumeric(number))
+                    return "বৈধ নাম্বার নয়";
+
                 return NumberToBangla(Convert.ToDecimal(number));
             }
             catch (Exception ex)
@@ -33,8 +36,6 @@ namespace NumberToBanglaWord
 
             if (number < 0 || number > 999999999)
                 return "নাম্বারটি অতিরিক্ত বড়";
-            else if (!IsNumeric(number.ToString()))
-                return "বৈধ নাম্বার নয়";
 
             decimal Kt = Math.Floor(number / 10000000); /* Koti */
             number -= Kt * 10000000;
