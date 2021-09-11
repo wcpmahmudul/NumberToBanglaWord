@@ -2,18 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Authors>MahmudulHasan</Authors>
-    <PackageId>Bitshapper.NumberToBanglaWord</PackageId>
+    <Authors>Mahmudul Hasan</Authors>
+    <PackageId>NumberToBanglaWords</PackageId>
     <Description>Library to convert number to Bangla word</Description>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/wcpmahmudul/NumberToBanglaWord</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Copyright>MahmudulHasan</Copyright>
+    <Copyright>2021</Copyright>
     <PackageIcon>download.png</PackageIcon>
     <PackageTags>NumberToWord, NumberToBanglaWord, NumberToBangla</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.1</Version>
+    <Version>1.0.0</Version>
+    <AssemblyName>NumberToBanglaWords</AssemblyName>
+    <RootNamespace>NumberToBanglaWords</RootNamespace>
+    <Product>Number To Bangla Words Conversion</Product>
   </PropertyGroup>
 
   <ItemGroup>

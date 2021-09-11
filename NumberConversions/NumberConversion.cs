@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NumberToBanglaWord
+namespace NumberToBanglaWords.NumberConversions
 {
-    public class NumberToWordConvert
+    public class NumberConversion
     {
         readonly static string[] hund = {"", "এক", "দুই", "তিন", "চার", "পাঁচ", "ছয়", "সাত", "আট", "নয়", "দশ",
             "এগার", "বার", "তের", "চৌদ্দ", "পনের", "ষোল", "সতের", "আঠার", "ঊনিশ", "বিশ",
@@ -16,14 +16,15 @@ namespace NumberToBanglaWord
             "একাত্তর", "বাহাত্তর", "তেহাত্তর", "চোয়াত্তর", "পঁচাত্তর", "ছিয়াত্তর", "সাতাত্তর", "আটাত্তর", "ঊনআশি", "আশি",
             "একাশি", "বিরাশি", "তিরাশি", "চোরাশি", "পঁচাশি", "ছিয়াশি", "সাতাশি", "অটাশি", "ঊননব্বই", "নব্বই",
             "একানব্বই", "বিরানব্বই", "তিরানব্বই", "চুরানব্বই", "পঁচানব্বই", "ছিয়ানব্বই", "সাতানব্বই", "আটানব্বই", "নিরানব্বই", "একশ" };
-        public string NumberToBanglaWord(string number)
+
+        public static string ToBanglaWord(string number)
         {
             try
             {
                 if (!IsNumeric(number))
                     return "বৈধ নাম্বার নয়";
 
-                return NumberToBangla(Convert.ToDecimal(number));
+                return Number2Bangla(Convert.ToDecimal(number));
             }
             catch (Exception ex)
             {
@@ -31,7 +32,7 @@ namespace NumberToBanglaWord
             }
         }
 
-        static string NumberToBangla(decimal number)
+        static string Number2Bangla(decimal number)
         {
 
             if (number < 0 || number > 999999999)
@@ -50,19 +51,19 @@ namespace NumberToBanglaWord
             string res = "";
             if (Kt > 0)
             {
-                res = NumberToBangla(Kt) + " কোটি ";
+                res = Number2Bangla(Kt) + " কোটি ";
             }
             if (Gn > 0)
             {
-                res = res + NumberToBangla(Gn) + " লাখ";
+                res = res + Number2Bangla(Gn) + " লাখ";
             }
             if (kn > 0)
             {
-                res = res + (res == "" ? "" : " ") + NumberToBangla(kn) + " হাজার";
+                res = res + (res == "" ? "" : " ") + Number2Bangla(kn) + " হাজার";
             }
             if (Hn > 0)
             {
-                res = res + (res == "" ? "" : " ") + NumberToBangla(Hn) + " শত";
+                res = res + (res == "" ? "" : " ") + Number2Bangla(Hn) + " শত";
             }
 
 
@@ -81,7 +82,6 @@ namespace NumberToBanglaWord
             return res;
 
         }
-
         static bool IsNumeric(string number)
         {
             int n;
