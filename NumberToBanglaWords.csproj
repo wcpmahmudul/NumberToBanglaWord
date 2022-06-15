@@ -13,10 +13,11 @@
     <PackageTags>NumberToWord, NumberToBanglaWord, NumberToBangla</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <AssemblyName>NumberToBanglaWords</AssemblyName>
     <RootNamespace>NumberToBanglaWords</RootNamespace>
     <Product>Number To Bangla Words Conversion</Product>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
